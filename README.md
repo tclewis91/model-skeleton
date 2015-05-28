@@ -33,17 +33,17 @@ This folder structure should be suitable for starting a project that uses a data
 ```
 
 ##Answers
--1) User.count
--2) Item.order(price: :asc)
--3) Item.where(category: 'Books').order("price ASC")
--4) User.joins("JOIN addresses ON users.id = addresses.user_id where addresses.street LIKE '6439 Z%'")
--5) User.joins("JOIN addresses ON addresses.user_id = users.id where users.first_name LIKE 'Virginie'")
+- 1) User.count
+- 2) Item.order(price: :asc)
+- 3) Item.where(category: 'Books').order("price ASC")
+- 4) User.joins("JOIN addresses ON users.id = addresses.user_id where addresses.street LIKE '6439 Z%'")
+- 5) User.joins("JOIN addresses ON addresses.user_id = users.id where users.first_name LIKE 'Virginie'")
           yields id 39
    Addresses.where(user_id:39)update_all(city: 'New York', state: 'NY', zip: '10108')
--6) Item.where(category:'Tool').sum(:price)
--7) Order.sum(:quantity)
--8) Item.joins("JOIN orders ON orders.item_id = items.id where items.category LIKE '%books%'").sum(price * quantity')
--9) User.find_or_create_by(first_name: 'Tiffany', last_name: 'Lewis', email:wantnewbeyalbum@hotmail.com)
+- 6) Item.where(category:'Tool').sum(:price)
+- 7) Order.sum(:quantity)
+- 8) Item.joins("JOIN orders ON orders.item_id = items.id where items.category LIKE '%books%'").sum(price * quantity')
+- 9) User.find_or_create_by(first_name: 'Tiffany', last_name: 'Lewis', email:wantnewbeyalbum@hotmail.com)
    Order.find_or_create_by(item_id:'711', quantity:'1', created_at: '12-12-2013' )
 
 
